@@ -7,4 +7,6 @@ export default {
   success: '#36d399',
   error: '#f87272',
   warning: '#fbbd22',
+  black: '#00000',
+  white: '#ffffff',
 };

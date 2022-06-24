@@ -12,6 +12,7 @@ import {
 import colors from '../config/colors';
 import AppText from '../components/AppText';
 import HeadingText from '../components/HeadingText';
+import AppButton from '../components/AppButton';
 
 function WelcomeScreen(props) {
   return (
@@ -30,11 +31,9 @@ function WelcomeScreen(props) {
           For all your bakery equipment needs!
         </HeadingText>
       </View>
-      <View style={styles.logInBtn}>
-        <AppText>Log In</AppText>
-      </View>
-      <View style={styles.signUpBtn}>
-        <AppText>Sign Up</AppText>
+      <View style={styles.btnContainer}>
+        <AppButton title='Log In'></AppButton>
+        <AppButton title='Sign Up' color='secondary'></AppButton>
       </View>
     </ImageBackground>
   );
@@ -46,29 +45,18 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
+  btnContainer: {
+    padding: 20,
+    width: '100%',
+  },
   logo: {
     height: 150,
     width: 150,
     alignSelf: 'center',
   },
-  logInBtn: {
-    width: '100%',
-    height: 70,
-    backgroundColor: colors.secondary,
-    alignItems: 'center',
-  },
   logoTagLineContainer: {
     position: 'absolute',
     top: 70,
-  },
-  signUpBtn: {
-    width: '100%',
-    height: 70,
-    backgroundColor: colors.accent,
-    alignItems: 'center',
-  },
-  tagLine: {
-    color: 'white',
   },
 });
 
