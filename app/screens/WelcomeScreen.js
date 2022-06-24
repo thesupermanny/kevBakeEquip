@@ -7,12 +7,17 @@ import {
   Text,
   SafeAreaView,
 } from 'react-native';
+
+//Created by me below
 import colors from '../config/colors';
+import AppText from '../components/AppText';
+import HeadingText from '../components/HeadingText';
 
 function WelcomeScreen(props) {
   return (
     <ImageBackground
       style={styles.background}
+      blurRadius={10}
       source={require('../assets/welcomeBackground.jpg')}
     >
       <View style={styles.logoTagLineContainer}>
@@ -21,13 +26,15 @@ function WelcomeScreen(props) {
           style={styles.logo}
           source={require('../assets/besLogo.png')}
         />
-        <Text style={styles.tagLine}>For all your bakery equipment needs!</Text>
+        <HeadingText Text style={styles.tagLine}>
+          For all your bakery equipment needs!
+        </HeadingText>
       </View>
       <View style={styles.logInBtn}>
-        <Text>Log In</Text>
+        <AppText>Log In</AppText>
       </View>
       <View style={styles.signUpBtn}>
-        <Text>Sign Up</Text>
+        <AppText>Sign Up</AppText>
       </View>
     </ImageBackground>
   );
