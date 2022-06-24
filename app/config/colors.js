@@ -9,4 +9,5 @@ export default {
   warning: '#fbbd22',
   black: '#00000',
   white: '#ffffff',
+  medium: '#6e6969',
 };

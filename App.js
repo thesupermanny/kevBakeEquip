@@ -5,18 +5,10 @@ import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import AppButton from './app/components/AppButton';
 import Card from './app/components/Card';
+import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Card
-        title='Boat for sale'
-        subTitle='Less than 100k rows, I promise'
-        image={require('./app/assets/boatSale.jpg')}
-      />
-    </View>
-  );
-  // return <WelcomeScreen />;
+  return <ListingDetailsScreen />;
 }
 
 const styles = StyleSheet.create({
