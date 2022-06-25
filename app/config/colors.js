@@ -10,4 +10,5 @@ export default {
   black: '#00000',
   white: '#ffffff',
   medium: '#6e6969',
+  light: '#bebebe',
 };

@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
   // Adding style for android screen so it does not go into StatusBar
   screen: {
     paddingTop: Constants.statusBarHeight,
+    flex: 1,
   },
 });
 export default Screen;
