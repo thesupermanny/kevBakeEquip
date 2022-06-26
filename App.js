@@ -9,17 +9,22 @@ import Card from './app/components/Card';
 import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 import colors from './app/config/colors';
 import MessagesScreen from './app/screens/MessagesScreen';
+import Icon from './app/components/Icon';
+import Screen from './app/components/Screen';
+import ListItem from './app/components/ListItem';
+import AccountScreen from './app/screens/AccountScreen';
+import ListingScreen from './app/screens/ListingScreen';
 
 export default function App() {
-  return <MessagesScreen />;
+  return <ListingScreen />;
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: colors.medium,
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    // backgroundColor: colors.secondary,
     // padding: 20,
     // paddingTop: 100,
     // backgroundColor: 'yellowgreen',

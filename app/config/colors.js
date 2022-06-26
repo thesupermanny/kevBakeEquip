@@ -7,8 +7,8 @@ export default {
   success: '#36d399',
   error: '#f87272',
   warning: '#fbbd22',
-  black: '#00000',
-  white: '#ffffff',
+  black: '#000',
+  white: '#fff',
   medium: '#6e6969',
-  light: '#bebebe',
+  light: '#fafafa',
 };
