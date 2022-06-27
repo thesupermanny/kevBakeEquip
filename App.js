@@ -15,11 +15,10 @@ import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screens/AccountScreen';
 import ListingScreen from './app/screens/ListingScreen';
 import AppTextInput from './app/components/AppTextInput';
+import AppPicker from './app/components/AppPicker';
+import { useState } from 'react';
+import LogInScreen from './app/screens/LogInScreen';
 
 export default function App() {
-  return (
-    <Screen>
-      <AppTextInput placeholder='username' icon='email' />
-    </Screen>
-  );
+  return <LogInScreen />;
 }
