@@ -8,7 +8,7 @@ import {
   Button,
   FlatList,
 } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons, FontAwesome } from '@expo/vector-icons';
 
 import colors from '../config/colors';
 import defaultStyles from '../config/styles';
@@ -34,11 +34,7 @@ function AppPicker({ icon, items, placeholder, onSelectItem, selectedItem }) {
           <AppText style={styles.text}>
             {selectedItem ? selectedItem.label : placeholder}
           </AppText>
-          <MaterialCommunityIcons
-            name='chevron-down'
-            size={20}
-            color={colors.accent}
-          />
+          <MaterialCommunityIcons name='' size={20} color={colors.accent} />
         </View>
       </TouchableWithoutFeedback>
       <Modal visible={modalVisable} animationType={'slide'}>

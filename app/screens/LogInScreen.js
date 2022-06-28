@@ -1,13 +1,9 @@
 import React from 'react';
 import { StyleSheet, Image } from 'react-native';
-import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import AppButton from '../components/AppButton';
-import AppText from '../components/AppText';
-import AppTextInput from '../components/AppTextInput';
 import Screen from '../components/Screen';
-import AppErrorMessage from '../components/AppErrorMessage';
+import { AppForm, AppFormField, SubmitButton } from '../components/forms';
 
 const validationShema = Yup.object().shape({
   email: Yup.string().required().email().label('Email'),
@@ -22,43 +18,33 @@ function LogInScreen(props) {
         style={styles.logo}
         source={require('../assets/besLogo.png')}
       />
-      <Formik
+      <AppForm
         initialValues={{ email: '', password: '' }}
         onSubmit={(values) => console.log(values)}
         validationSchema={validationShema}
       >
-        {({ handleChange, handleSubmit, errors, setTouched, touched }) => (
-          <>
-            <AppTextInput
-              autoCapitalize='none'
-              autoCorrect={false}
-              icon='email'
-              keyboardType='email-address'
-              onBlur={() => setTouched('email')}
-              onChangeText={handleChange('email')}
-              placeholder='email'
-              //Allows IOS to auto fill from keychain
-              textContentType='emailAddress'
-            />
-            <AppErrorMessage error={errors.email} visible={touched.email} />
-            <AppTextInput
-              autoCapitalize='none'
-              autoCorrect={false}
-              icon='lock'
-              onBlur={() => setTouched('password')}
-              onChangeText={handleChange('password')}
-              placeholder='Password'
-              secureTextEntry={true}
-              textContentType='password'
-            />
-            <AppErrorMessage
-              error={errors.password}
-              visible={touched.password}
-            />
-            <AppButton color='error' title='Log In' onPress={handleSubmit} />
-          </>
-        )}
-      </Formik>
+        <AppFormField
+          autoCapitalize='none'
+          autoCorrect={false}
+          icon='email'
+          keyboardType='email-address'
+          name='email'
+          placeholder='email'
+          //Allows IOS to auto fill from keychain
+          textContentType='emailAddress'
+        />
+
+        <AppFormField
+          autoCapitalize='none'
+          autoCorrect={false}
+          icon='lock'
+          name='password'
+          placeholder='Password'
+          secureTextEntry={true}
+          textContentType='password'
+        />
+        <SubmitButton title='Log In' />
+      </AppForm>
     </Screen>
   );
 }
