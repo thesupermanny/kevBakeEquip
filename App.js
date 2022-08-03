@@ -21,5 +21,5 @@ import LogInScreen from './app/screens/LogInScreen';
 import RegisterScreen from './app/screens/RegisterScreen';
 
 export default function App() {
-  return <LogInScreen />;
+  return <WelcomeScreen />;
 }
