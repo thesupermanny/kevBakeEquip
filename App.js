@@ -22,5 +22,5 @@ import RegisterScreen from './app/screens/RegisterScreen';
 import ImageInput from './app/components/ImageInput';
 
 export default function App() {
-  return <WelcomeScreen />;
+  return <RegisterScreen />;
 }

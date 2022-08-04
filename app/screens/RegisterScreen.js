@@ -17,11 +17,11 @@ const validationShema = Yup.object().shape({
 function RegisterScreen(props) {
   return (
     <Screen style={styles.container}>
-      {/* <Image
+      <Image
         resizeMode='contain'
         style={styles.logo}
         source={require('../assets/besLogo.png')}
-      /> */}
+      />
       <Formik
         initialValues={{ email: '', password: '' }}
         onSubmit={(values) => console.log(values)}
