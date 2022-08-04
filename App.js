@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import 'react-native-gesture-handler';
@@ -16,9 +17,9 @@ import AccountScreen from './app/screens/AccountScreen';
 import ListingScreen from './app/screens/ListingScreen';
 import AppTextInput from './app/components/AppTextInput';
 import AppPicker from './app/components/AppPicker';
-import { useState } from 'react';
 import LogInScreen from './app/screens/LogInScreen';
 import RegisterScreen from './app/screens/RegisterScreen';
+import ImageInput from './app/components/ImageInput';
 
 export default function App() {
   return <WelcomeScreen />;
