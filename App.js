@@ -20,7 +20,8 @@ import AppPicker from './app/components/AppPicker';
 import LogInScreen from './app/screens/LogInScreen';
 import RegisterScreen from './app/screens/RegisterScreen';
 import ImageInput from './app/components/ImageInput';
+import ListingEditScreen from './app/screens/ListingEditScreen';
 
 export default function App() {
-  return <RegisterScreen />;
+  return <ListingEditScreen />;
 }
