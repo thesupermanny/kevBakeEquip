@@ -1,0 +1,5 @@
+// Used to tell vs code that we are working on JS project
+// We exclude node modules to improve performace with intellisense
+{
+  "exclude": ["node_modules"]
+}

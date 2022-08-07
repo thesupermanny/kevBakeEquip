@@ -14,14 +14,16 @@ import Screen from '../components/Screen';
 const initialMessages = [
   {
     id: 1,
-    title: 'T1',
-    description: 'D1',
+    title:
+      'Title of message Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     image: require('../assets/headShotTwo.jpg'),
   },
   {
     id: 2,
-    title: 'T2',
-    description: 'D2',
+    title: 'Title of message',
+    description: 'Description two',
     image: require('../assets/headShotTwo.jpg'),
   },
 ];
