@@ -11,15 +11,17 @@ import Icon from './Icon';
 function ListItem({
   title,
   subTitle,
+  padding = 15,
   image,
   IconComponent,
+  needsChevrons = false,
   onPress,
   renderRightActions,
 }) {
   return (
     <Swipeable renderRightActions={renderRightActions}>
       <TouchableHighlight underlayColor={colors.accent} onPress={onPress}>
-        <View style={styles.container}>
+        <View style={[styles.container, { padding: padding }]}>
           {IconComponent}
           {image && <Image style={styles.image} source={image} />}
           <View style={styles.detailsContainer}>
@@ -32,12 +34,13 @@ function ListItem({
               </AppText>
             )}
           </View>
-
-          <MaterialCommunityIcons
-            name='chevron-right'
-            size={25}
-            color={colors.primary}
-          />
+          {needsChevrons && (
+            <MaterialCommunityIcons
+              name='chevron-right'
+              size={25}
+              color={colors.primary}
+            />
+          )}
         </View>
       </TouchableHighlight>
     </Swipeable>
@@ -48,7 +51,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 15,
+    // padding: 15,
     backgroundColor: colors.white,
   },
   detailsContainer: {
