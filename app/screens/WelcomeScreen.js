@@ -39,7 +39,7 @@ function WelcomeScreen({ navigation }) {
           }}
         ></AppButton>
         <AppButton
-          title='Sign Up'
+          title='Register'
           onPress={() => {
             navigation.navigate('Register');
           }}

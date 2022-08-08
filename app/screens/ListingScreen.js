@@ -1,51 +1,45 @@
 import React from 'react';
-import { View, FlatList, StyleSheet } from 'react-native';
+import { FlatList, StyleSheet } from 'react-native';
 
 import Card from '../components/Card';
-import Screen from '../components/Screen';
 import colors from '../config/colors';
+import routes from '../navigation/routes';
+import Screen from '../components/Screen';
 
 const listings = [
   {
     id: 1,
-    title: 'Boat for sale',
-    price: 100,
-    image: require('../assets/boatSale.jpg'),
+    title: 'Leaf for sale',
+    price: 10.0,
+    image: require('../assets/listingImages/leaf.jpg'),
   },
   {
     id: 2,
-    title: 'Boat for sale',
-    price: 100,
-    image: require('../assets/boatSale.jpg'),
+    title: 'Statue for sale',
+    price: 4998.98,
+    image: require('../assets/listingImages/statue.jpg'),
   },
   {
     id: 3,
-    title: 'Boat for sale',
-    price: 100,
-    image: require('../assets/boatSale.jpg'),
-  },
-  {
-    id: 4,
-    title: 'Boat for sale',
-    price: 100,
-    image: require('../assets/boatSale.jpg'),
-  },
-  {
-    id: 5,
-    title: 'Boat for sale',
-    price: 100,
-    image: require('../assets/boatSale.jpg'),
+    title: 'Building for sale',
+    price: 599.99,
+    image: require('../assets/listingImages/building.jpg'),
   },
 ];
 
-function ListingScreen(props) {
+function ListingScreen({ navigation }) {
   return (
     <Screen style={styles.screen}>
       <FlatList
         data={listings}
         keyExtractor={(listing) => listing.id.toString()}
         renderItem={({ item }) => (
-          <Card title={item.title} subTitle={item.price} image={item.image} />
+          <Card
+            title={item.title}
+            subTitle={item.price}
+            image={item.image}
+            onPress={() => navigation.navigate(routes.LISTING_DETAILS, item)}
+          />
         )}
       />
     </Screen>
