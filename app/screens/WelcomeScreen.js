@@ -14,7 +14,7 @@ import AppText from '../components/AppText';
 import HeadingText from '../components/HeadingText';
 import AppButton from '../components/AppButton';
 
-function WelcomeScreen(props) {
+function WelcomeScreen({ navigation }) {
   return (
     <ImageBackground
       style={styles.background}
@@ -32,8 +32,19 @@ function WelcomeScreen(props) {
         </HeadingText>
       </View>
       <View style={styles.btnContainer}>
-        <AppButton title='Log In'></AppButton>
-        <AppButton title='Sign Up' color='secondary'></AppButton>
+        <AppButton
+          title='Log In'
+          onPress={() => {
+            navigation.navigate('Login');
+          }}
+        ></AppButton>
+        <AppButton
+          title='Sign Up'
+          onPress={() => {
+            navigation.navigate('Register');
+          }}
+          color='secondary'
+        ></AppButton>
       </View>
     </ImageBackground>
   );
