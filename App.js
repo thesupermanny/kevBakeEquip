@@ -21,35 +21,24 @@ import LogInScreen from './app/screens/LogInScreen';
 import RegisterScreen from './app/screens/RegisterScreen';
 import ImageInput from './app/components/ImageInput';
 import ListingEditScreen from './app/screens/ListingEditScreen';
+import ImageInputList from './app/components/ImageInputList';
 
 export default function App() {
-  const [imageUri, setImageUri] = useState();
+  const [imageUris, setImageUris] = useState([]);
 
-  // const requestPermission = async () => {
-  //   const { granted } = await ImagePicker.requestMediaLibraryPermissionsAsync();
-  //   if (!granted) alert('You need to enable Photo permissions!');
-  // };
-
-  // useEffect(() => {
-  //   requestPermission();
-  // }, []);
-
-  // const selectImage = async () => {
-  //   try {
-  //     const result = await ImagePicker.launchImageLibraryAsync();
-  //     if (!result.cancelled) setImageUri(result.uri);
-  //   } catch (error) {
-  //     console.log('Error launching library', error);
-  //   }
-  // };
+  const handleAdd = (uri) => {
+    setImageUris([...imageUris, uri]);
+  };
+  const handleRemove = (uri) => {
+    setImageUris(imageUris.filter((imageUri) => imageUri !== uri));
+  };
 
   return (
     <Screen>
-      {/* <AppButton title={'Press me'} onPress={selectImage} /> */}
-      {/* <Image source={{ uri: imageUri }} style={{ width: 200, height: 200 }} /> */}
-      <ImageInput
-        imageUri={imageUri}
-        onChangeImage={(uri) => setImageUri(uri)}
+      <ImageInputList
+        imageUris={imageUris}
+        onAddImage={handleAdd}
+        onRemoveImage={handleRemove}
       />
     </Screen>
   );
